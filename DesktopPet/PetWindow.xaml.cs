@@ -89,19 +89,16 @@ namespace DesktopPet
             SslProtocols = SslProtocols.Tls12
         });
 
-
-        private const string AI_ENDPOINT = "https://desktoppet-ai.h-ilona27.workers.dev";
-
+        // AI endpoint - Cloudflare Worker URL - OpenAI API-t hívja meg 
+        private const string AI_ENDPOINT ="https://dekstoppet-ai.h-ilona27.workers.dev/";
 
         //Chat memória 
+        // A List<(string, string)> egy tuple lista ami a szerepet és a tartalmat tárolja
         List<(string role, string content)> chatMemory = new();
-
         const int MaxMemoryMessages = 6;
 
         public PetWindow()
         {
-
-
             InitializeComponent();
 
             // Kezdeti pozíciók és framek betöltése
@@ -458,49 +455,44 @@ namespace DesktopPet
                 chatMemory.RemoveAt(0);
         }
 
+        // AI kérés válasza itt kerül feldolgozásra, visszaadásra
         private async Task<string> AskAIAsync(string userMessage)
         {
-            var messages = new List<object>();
-
-            // system prompt
-            messages.Add(new
-            {
-                role = "system",
-                content = "Segítőkész asztali asszisztens vagy. Magyarul válaszolj."
-            });
-
-            // chat memória
-            foreach (var msg in chatMemory)
-            {
-                messages.Add(new
-                {
-                    role = msg.role,
-                    content = msg.content
-                });
-            }
-
             var payload = new
             {
-                model = "gpt-4o-mini",
-                messages = messages
+                message = userMessage,
+                history = chatMemory.Select(m => new
+                {
+                    role = m.role,
+                    content = m.content
+                })
             };
 
             var json = JsonSerializer.Serialize(payload);
-            using var content = new StringContent(json, Encoding.UTF8, "application/json");
 
+            // HTTP POST kérés 
+            using var content = new StringContent(
+                json,
+                Encoding.UTF8,
+                "application/json"
+            );
+
+            // Kérés küldése és válasz fogadása
             var response = await httpClient.PostAsync(AI_ENDPOINT, content);
+
+            // Hibakezelés 
             response.EnsureSuccessStatusCode();
 
+            // Válasz feldolgozása a ReadAsStringAsync metódussal a HttpContent osztályból -> JSON stringet ad vissza
             var responseJson = await response.Content.ReadAsStringAsync();
+
+            // a JsonDocument egy IDisposable, ezért using-al kezeljük, az erőforrást felszabadítja a blokk végén
             using var doc = JsonDocument.Parse(responseJson);
 
             return doc.RootElement
-                .GetProperty("choices")[0]
-                .GetProperty("message")
-                .GetProperty("content")
+                .GetProperty("reply") // mező string értékét adja vissza a jsonből
                 .GetString()!;
         }
-
-
     }
 }
+
