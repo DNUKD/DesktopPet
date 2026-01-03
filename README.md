@@ -36,7 +36,7 @@ A pet interaktív, képes üzeneteket megjeleníteni, és egy beépített GPT-al
 - C#
 - WPF (.NET)
 - XAML
-- Cloudflare Workers (AI proxy)
+- Cloudflare Workers (proxy)
 - OpenAI / GPT API
 
 ## Projekt struktúra
