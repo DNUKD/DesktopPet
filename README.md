@@ -34,7 +34,3 @@ A pet interaktív, képes üzeneteket megjeleníteni, és egy beépített GPT-al
 - Az alkalmazás magyar nyelvű válaszokra van konfigurálva system prompt segítségével.
 - A `TextBox` vezérlő read-only módban van használva a chathez, hogy a szöveg kijelölhető és másolható legyen.
 
-## Készítette
-Név: **[IDE ÍRD A NEVED]**  
-Kurzus / Tantárgy: **[IDE ÍRD]**  
-Év: **2025**
