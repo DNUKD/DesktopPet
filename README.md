@@ -1,4 +1,4 @@
-﻿![DesktopPet Header](Assets/Images/header.png)
+﻿![DesktopPet Header](DesktopPet/Assets/Images/header.png)
 
 # DesktopPet
 
