@@ -1,0 +1,129 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Animations\Fall\fall_01.png" />
+    <None Remove="Assets\Animations\Fall\fall_02.png" />
+    <None Remove="Assets\Animations\Fall\fall_03.png" />
+    <None Remove="Assets\Animations\Fall\fall_04.png" />
+    <None Remove="Assets\Animations\Fall\fall_05.png" />
+    <None Remove="Assets\Animations\Fall\fall_06.png" />
+    <None Remove="Assets\Animations\Fall\fall_07.png" />
+    <None Remove="Assets\Animations\UI_elements\Trigger\felho_01.png" />
+    <None Remove="Assets\Animations\UI_elements\Trigger\felho_02.png" />
+    <None Remove="Assets\Animations\UI_elements\Trigger\felho_03.png" />
+    <None Remove="Assets\Animations\UI_elements\Trigger\felho_04.png" />
+    <None Remove="Assets\Animations\UI_elements\Trigger\felho_05.png" />
+    <None Remove="Assets\Animations\UI_elements\Window\window_01.png" />
+    <None Remove="Assets\Animations\UI_elements\Window\window_02.png" />
+    <None Remove="Assets\Animations\UI_elements\Window\window_03.png" />
+    <None Remove="Assets\Animations\UI_elements\Window\window_04.png" />
+    <None Remove="Assets\Animations\Walk\Left\walk_left_01.png" />
+    <None Remove="Assets\Animations\Walk\Left\walk_left_02.png" />
+    <None Remove="Assets\Animations\Walk\Left\walk_left_03.png" />
+    <None Remove="Assets\Animations\Walk\Right\walk_right_01.png" />
+    <None Remove="Assets\Animations\Walk\Right\walk_right_02.png" />
+    <None Remove="Assets\Animations\Walk\Right\walk_right_03.png" />
+    <None Remove="Assets\Images\header.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DryIoc.dll" Version="5.4.3" />
+    <PackageReference Include="OpenAI" Version="2.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Animations\Fall\fall_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Fall\fall_02.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Fall\fall_03.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Fall\fall_04.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Fall\fall_05.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Fall\fall_06.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Fall\fall_07.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Idle\idle_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Sit\sit_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Sit\sit_02.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Sit\sit_03.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Sit\sit_04.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Trigger\felho_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Trigger\felho_02.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Trigger\felho_03.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Trigger\felho_04.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Trigger\felho_05.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Window\window_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Window\window_02.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Window\window_03.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\UI_elements\Window\window_04.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Walk\Left\walk_left_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Walk\Left\walk_left_02.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Walk\Left\walk_left_03.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Walk\Right\walk_right_01.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Walk\Right\walk_right_02.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Animations\Walk\Right\walk_right_03.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\header.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
