@@ -5,6 +5,8 @@
 Egy WPF alapú asztali alkalmazás, amely egy „desktop petet” jelenít meg a képernyőn.
 A pet interaktív, képes üzeneteket megjeleníteni, és egy beépített GPT-alapú asszisztenssel kommunikálni.
 
+📎 A projekt vizuális koncepciója a klasszikus Microsoft Office Assistant (Clippy) jelenségéből merít inspirációt.
+
 ## Funkciók
 - Átlátszó, mindig legfelül lévő WPF ablak
 - Asztali karakter (pet) megjelenítése
@@ -26,9 +28,10 @@ A pet interaktív, képes üzeneteket megjeleníteni, és egy beépített GPT-al
 - `App.xaml.cs` – alkalmazás inicializálás
 
 ## Indítás
-1. Projekt megnyitása Visual Studio-ban
-2. `DesktopPet` indítása
-3. Az alkalmazás automatikusan a `PetWindow` ablakkal indul
+1. A projekt letöltése a GitHub repositoryból (ZIP vagy klónozás).
+2. Projekt megnyitása Visual Studio-ban
+3. `DesktopPet` indítása
+4. Az alkalmazás automatikusan a `PetWindow` ablakkal indul
 
 ## Megjegyzések
 - Az alkalmazás magyar nyelvű válaszokra van konfigurálva system prompt segítségével.
